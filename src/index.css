@@ -1,0 +1,102 @@
+body{
+    overflow: hidden;
+}
+.ps-menu-icon {
+    font-size: 19px; 
+    color: #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.ps-menu-button:hover .ps-menu-icon {
+    color: rgba(248, 212, 66, 1);
+    transform: scale(1.2); 
+}
+
+.ps-menu-button {
+    padding: 5px 2px !important; 
+    border-radius: 8px; 
+    transition: background 0.3s ease; 
+  
+}
+.logoutyapa:hover{
+    color: rgba(248, 212, 66, 1) !important;
+    transform: scale(1.2); 
+}
+
+.ps-menu-button:hover {
+    background: none !important;
+}
+#custom_sidebar {
+ 
+    min-height: 100vh;
+  
+}
+/* .ps-sidebar-container{
+    height: 100vh !important;
+    background-color: blueviolet !important;
+} */
+
+
+/* خليه هو الوحيد اللي ماسك اللون */
+/* خليه هو الوحيد اللي ماسك اللون */
+#custom_sidebar {
+    background-color: rgba(242, 234, 225, 1) !important;
+    min-height: 100% !important; /* علشان يتمد من فوق لتحت */
+    height: 100% !important;     /* لو حابب تزود التأكيد */
+  }
+  
+  
+  #custom_sidebar .ps-sidebar,
+#custom_sidebar .ps-sidebar-inner,
+#custom_sidebar > div {
+    background-color: rgba(242, 234, 225, 1) !important;
+}
+.collapsed-menu {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .collapsed-menu .menu-text {
+    display: none !important;
+  }
+  .collapsed-logout p {
+    display: none !important; 
+  }
+  .deails_Image img{
+    width: 90px !important;
+    height: 90px !important;
+     border-radius: 50%;
+     padding: 5px;
+
+  }
+  .deails_Image h6{
+   font-weight: 400;
+   font-size: 15px;
+   text-align: center;
+   justify-content: center;
+
+  }
+  .deails_Image p{
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  
+  }
+  .TITILE_SIDE h3{
+    font-size: 15px !important;
+    display: flex !important;
+    padding: 2px  !important;
+    align-items: center !important;
+
+  }
+  .TOTO{
+    font-size: 13px !important;
+    color: rgba(248, 212, 66, 1);
+  }
+  .TOTO :hover{
+    font-size: 14px !important;
+    color:#000;
+   cursor: pointer;
+    transform: scale(1.2)!important; 
+  }
+  

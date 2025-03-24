@@ -13,7 +13,7 @@ const App = () => {
 
 const routes:any= createBrowserRouter([
   {
-    path:'',
+    path:'',  
   element: <AutoLayout/>,
   errorElement:<Error/>,
   children:[
@@ -38,8 +38,8 @@ const routes:any= createBrowserRouter([
 ])
   return (
     <React.Fragment>
+      
 <RouterProvider router={routes}>
-
 </RouterProvider>
     </React.Fragment>
   )

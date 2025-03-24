@@ -106,6 +106,9 @@ font-weight: 500;
 @media(max-width:1024px){
     .bodyForm{
         padding: 20px;
+        max-width: 450px; 
+      
+       
     }
 }
 

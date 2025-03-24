@@ -1,0 +1,171 @@
+.sideNavbar{
+    height: 100% !important;
+    overflow: hidden !important;
+    background-color:rgba(242, 234, 225, 1) !important;
+  
+ 
+}
+.topsidenavtitle{
+    display: flex;
+    align-items: center  !important;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.listMID {
+    background-color: rgba(242, 234, 225, 1) !important;
+   
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+   
+}
+.details img{
+    width: 120px;
+     height: 120px;
+      border-radius: 50%;
+      padding: 5px;
+}
+.details h6{
+font-weight: 700;
+}
+.details p{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(254, 175, 0, 1);
+
+}
+#custom_sidebar,
+#custom_sidebar .ps-sidebar,
+#custom_sidebar .ps-sidebar-inner,
+#custom_sidebar > div {
+  background-color:rgba(242, 234, 225, 1) !important;
+  font-size: 15px;
+  font-weight: 600;
+  
+  
+ 
+
+}
+#custom-sidebar .ps-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+    margin: auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+    flex-direction: column !important;
+  }
+
+#custom_sidebar {
+    width: 100% !important;
+    display: flex !important;
+ 
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#custom_sidebar .ps-sidebar-container {
+    width: auto !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+   
+    justify-content: center !important;
+}
+
+
+#custom_sidebar .ps-menu {
+  
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+.logout{
+    display: flex !important;
+    justify-content:center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top:50px  ;
+}
+.logouticon{
+    font-size: 15px;
+    font-weight:900;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+
+}
+.topsidenavtitle{
+    padding: 20px 10px;
+}
+.topsidenavtitle  h3{
+font-weight: 700;
+font-size: 19px;
+letter-spacing: 1px;
+}
+.topsidenavtitle  span{
+    color: rgba(248, 212, 66, 1);
+    font-weight: 900;
+
+}
+.topsidenavtitle .icondirection{
+    font-size:18px;
+
+}
+.menu_item{
+   
+    padding: 5px 5px !important; 
+   
+}
+
+.icondirection:hover{
+    color: rgba(248, 212, 66, 1) !important;
+    transform: scale(1.2)!important; 
+    cursor: pointer;
+}
+
+.ps-sidebar_collapsed .details {
+    display: none;
+  }
+  .topsidenavtitle{
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  #custom_sidebar .ps-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+.menu_item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 5px !important; 
+    padding: 5px !important;
+  }
+  .myMenuContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; 
+    align-items: center  !important;     
+           
+  }
+  
+ 
+ 
