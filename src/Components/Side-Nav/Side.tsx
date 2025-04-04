@@ -7,6 +7,7 @@ import { IoHomeOutline } from 'react-icons/io5';
 import { FaRegBookmark, FaGraduationCap } from 'react-icons/fa6';
 import { CgProfile } from 'react-icons/cg';
 import logoutimage from '../../assets/Yousef/iconlogout.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Side = ({ collapsed, setCollapsed }) => {
   
@@ -14,6 +15,10 @@ const Side = ({ collapsed, setCollapsed }) => {
     setCollapsed(!collapsed);
     console.log(collapsed);
   };
+  let usenavigate=useNavigate()
+ let go=()=>{
+  usenavigate('/dashboard/home')
+ }
 
   return (
     <div className={Update.sideNavbar}>
@@ -42,7 +47,7 @@ const Side = ({ collapsed, setCollapsed }) => {
 
         <Menu className={`text-center ${Update.myMenuContainer} ${ collapsed  && "collapsed-menu"}`}>
   <MenuItem icon={<IoHomeOutline />} className={`text-center ${Update.menu_item}`}>
-    <span className="menu-text">Home</span>
+    <span className="menu-text" onClick={go} >Home</span>
   </MenuItem>
   <MenuItem icon={<FaRegBookmark />} className={`text-center ${Update.menu_item}`}>
     <span className="menu-text">Users</span>

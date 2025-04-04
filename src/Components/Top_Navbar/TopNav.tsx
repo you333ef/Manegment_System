@@ -10,6 +10,7 @@ import { FaRegBell } from "react-icons/fa";
 import InputGroup from 'react-bootstrap/InputGroup';
 import { FaSearch } from 'react-icons/fa'; 
 import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 function NavScrollExample() {
@@ -29,7 +30,12 @@ function NavScrollExample() {
       e.stopPropagation();
     }
   };
-
+  let navi=useNavigate()
+  let TOUSEr=()=>{
+    navi('/dashboard/users')
+  }
+ let location=useLocation()
+ 
   return (
     <div className={` ${STYLEST.TTOPYA}`}>
     <Navbar expand="lg" className={`w-100 m-0 border-0   ${STYLEST.bgtopanv}`}>
@@ -75,10 +81,12 @@ function NavScrollExample() {
   className="w-100 px-4 py-1 d-flex justify-content-between align-items-center"
   style={{ backgroundColor: 'rgba(255, 255, 255, 1)' }} 
 >
-  <h5 className={STYLEST.TETO}>USER LIST</h5>
-  <Button variant="" className={STYLEST.adduser}>
-    ADD NEW USER
-  </Button>
+  <h5 className={STYLEST.TETO}>{location.pathname ==='/dashboard/users' ?'Add User':"USER LIST"}</h5>
+ {location.pathname ==='/dashboard/users' ?
+ '' : <Button variant="" onClick={TOUSEr} className={STYLEST.adduser}>
+ ADD NEW USER
+</Button>
+}
 </div>
     </div>
   );

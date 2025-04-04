@@ -4,10 +4,13 @@ import AutoLayout from './Components/Sign/AutoLayout';
 import Sign from './Components/Sign/Sign';
 import MasterLayOut from './Components/MasterLayOut';
 import Home from './Components/Home/Home';
-import Users from './Components/Users/Users';
+import ADDUsers from './Components/Users/ADDUsers';
 import Add from './Components/ADD_User/Add';
 import Profile from './Components/Profile/Profile';
 import Error from './Components/Error';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const App = () => {
 
@@ -27,7 +30,7 @@ const routes:any= createBrowserRouter([
     errorElement:<Error/>,
     children:[
       {path:'home',element:<Home/>},
-      {path:'users',element:<Users/>},
+      {path:'users',element:<ADDUsers/>},
       {path:'add',element:<Add/>},
       {path:'profile',element:<Profile/>},
 
@@ -37,7 +40,9 @@ const routes:any= createBrowserRouter([
  
 ])
   return (
+    
     <React.Fragment>
+      
       
 <RouterProvider router={routes}>
 </RouterProvider>

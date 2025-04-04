@@ -1,8 +1,9 @@
 import React from 'react'
-import STYLLY from '../Profile/profile.module.css'
+import styles from '../Profile/profile.module.css'
+
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <div className={styles.profileContainer}>Profile</div>
   )
 }
 

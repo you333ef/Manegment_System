@@ -1,0 +1,72 @@
+
+.usersContainer {
+    padding: 4rem;
+    background-color:rgba(255, 255, 255, 1); /* يمكنك تغييره حسب رغبتك */
+    border-radius: 8px;
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.1);
+
+margin-top: 50px;
+width: 90%;
+
+
+
+  }
+  
+  
+  
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 15px;
+    font-weight: 500;
+    color:rgba(108, 108, 108, 1); 
+  }
+  
+  .input {
+    border-radius: 4px;
+    width: 100%;
+    background-color: rgba(229, 229, 229, 1);
+   
+  }
+  .input::placeholder {
+    color:rgba(108, 108, 108, 1); 
+font-size: 14px;
+    opacity: 1; 
+  }
+  
+  
+  .saveButton {
+    background-color:   rgba(254, 175, 0, 1);
+    color: #fff;
+    border: none;
+    padding: 7px 10px;
+
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+ 
+    font-weight: 400;
+  }
+  
+  .saveButton:hover {
+    background-color:rgb(252, 177, 14);
+  }
+  @media(max-width:1024px){
+    .saveButton {
+      width: 100%;
+    }
+    .usersContainer {
+        padding: 2rem;
+    margin-top: 50px;
+    width: 100%;
+    
+    
+    
+      }
+  }
+  
+  .errormessage{
+    color: rgb(79, 31, 31);
+    font-size: 14px;
+    font-weight: 500;
+  }

@@ -12,8 +12,9 @@ let {register,handleSubmit,formState:{errors}}=useForm()
  let submit_Fun=async (data:any)=>{
    try {
     let response=await axios.post('https://dummyjson.com/auth/login',data)
-    navi('/dashboard')
+    navi('/dashboard/home')
     toast("Wow so easy!")
+    localStorage.setItem("data_Login_User",response.data.accessToken)
     console.log(response,data)
    } catch (error) {
     console.log('Error Ya Zahpee')
