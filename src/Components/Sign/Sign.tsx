@@ -18,7 +18,9 @@ const Sign: React.FC = () => {
   const submit_Fun: SubmitHandler<SignFormData> = async (data) => {
     try {
       let response = await axios.post('https://dummyjson.com/auth/login', data);
+     
       navi('/dashboard/home');
+      window.location.reload();
       toast("Wow so easy!");
       localStorage.setItem("data_Login_User", response.data.accessToken);
       console.log(response, data);
