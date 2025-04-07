@@ -99,4 +99,7 @@ body{
    cursor: pointer;
     transform: scale(1.2)!important; 
   }
-  
+  .TITILE_SIDEE{
+    margin-top: 50% !important;
+}
+}

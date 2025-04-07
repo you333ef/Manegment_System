@@ -98,7 +98,7 @@ font-weight: 700;
     gap: 20px !important;
     font-weight: 700;
     font-size: 15px;
-    margin-top:50px  ;
+    margin-top:20px  ;
 }
 .logouticon{
     font-size: 15px;
@@ -168,4 +168,21 @@ letter-spacing: 1px;
   }
   
  
- 
+  @media (max-width: 768px) {
+    
+
+    .topsidenavtitle {
+        padding-top: 30px; 
+        
+    }
+
+    .details {
+        margin-top: 50%; 
+       
+      
+    }
+
+    .myMenuContainer {
+        margin-top: 10px; 
+    }
+}

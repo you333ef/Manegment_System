@@ -1,11 +1,15 @@
 
 .usersContainer {
-    padding: 4rem;
+  
+   padding: 3rem;
     background-color:rgba(255, 255, 255, 1); /* يمكنك تغييره حسب رغبتك */
     border-radius: 8px;
-    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+    0 -5px 10px rgba(0, 0, 0, 0.15), /* ظل من الأعلى */
+    0  5px 10px rgba(0, 0, 0, 0.1);  /* ظل من الأسفل (أو نفس القديم) */
 
-margin-top: 50px;
+
+margin-top: 80px;
 width: 90%;
 
 
@@ -70,3 +74,48 @@ font-size: 14px;
     font-size: 14px;
     font-weight: 500;
   }
+ 
+  .coco img{
+    width: 130px;
+    height: 130px;
+    z-index: 1000;
+     border-radius: 50%;
+   margin-top: 20px;
+
+     
+   
+    
+}
+.coco {
+  position: relative; /* حتى نستطيع وضع الصورة Absolute داخله */
+  width: 100%;
+}
+
+/* تنسيق الصورة بحيث تكون نصفها فوق الـContainer ونصفها بالداخل */
+.coco img {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  /* translate(-50%, -50%) يجعل مركز الصورة (منتصفها) عند أعلى الـContainer */
+  
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+/* دفع محتوى الـContainer لأسفل حتى لا يتداخل مع الصورة */
+.usersContainer {
+  margin-top: 100px; /* تقريبًا نصف ارتفاع الصورة (130 / 2 = 65) */
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  /* باقي التنسيقات كما هي */
+}
+
+.input{
+  font-size: 14px;
+  font-weight: 700;
+}
