@@ -1,19 +1,21 @@
+///<reference types="react" />
+
+import React, { useContext, useState, useEffect } from 'react';  // أضفنا React هنا
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import STYLEST from './topnav.module.css'
+import STYLEST from './topnav.module.css';
 import { BiChevronLeftCircle } from "react-icons/bi";
 import { FaRegBell } from "react-icons/fa";
 import InputGroup from 'react-bootstrap/InputGroup';
-import { FaSearch } from 'react-icons/fa'; 
-import React, { useContext, useState, useEffect } from 'react';
+import { FaSearch } from 'react-icons/fa';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ContextYasta } from '../../Context/Test_data';
 
-function NavScrollExample(): JSX.Element {
+function NavScrollExample(): React.ReactElement {
   const [isLarge, setIsLarge] = useState<boolean>(window.innerWidth >= 1024);
 
   useEffect(() => {
@@ -37,7 +39,7 @@ function NavScrollExample(): JSX.Element {
   };
   let location = useLocation();
   let [search, setSearch] = useState<string>('');
- 
+
   let { searchdata, setsearchdata } = useContext<{ searchdata: string; setsearchdata: React.Dispatch<React.SetStateAction<string>> }>(ContextYasta);
 
   let handlesearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -52,7 +54,7 @@ function NavScrollExample(): JSX.Element {
           <Navbar.Brand href="#">
             <BiChevronLeftCircle className={STYLEST.iconnn} />
           </Navbar.Brand>
-          
+
           <Navbar.Toggle aria-controls="navbarScroll" onClick={handleToggle} />
           {isLarge && (
             <Navbar.Collapse id="navbarScroll">
@@ -79,12 +81,12 @@ function NavScrollExample(): JSX.Element {
                   <FaRegBell className={STYLEST.iconpell} />
                 </Button>
               </Form>
-         
+
             </Navbar.Collapse>
           )}
-         
+
         </Container>
-      
+
       </Navbar>
       <div 
         className="w-100 px-4 py-1 d-flex justify-content-between align-items-center"
