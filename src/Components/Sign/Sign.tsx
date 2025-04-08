@@ -1,5 +1,5 @@
 import React from 'react';
-import Stylee from '../Sign/sign.module.css';
+// import '../Sign/Edit_sign.css';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -30,15 +30,15 @@ const Sign: React.FC = () => {
   };
 
   return (
-    <div className={Stylee.login_Wazeer}>
+    <div className="sign-container">
       <ToastContainer />
-      <div className={Stylee.bodyForm}>
-        <h4 className={Stylee.title}><span>|</span>User Management System</h4>
-        <div className={Stylee.enterSection}>
+      <div className="sign-form-wrapper">
+        <h4 className="sign-title"><span>|</span>User Management System</h4>
+        <div className="sign-header">
           <h3>SIGN IN</h3>
           <p>Enter your credentials to access your account</p>
         </div>
-        <form onSubmit={handleSubmit(submit_Fun)} className={Stylee.formContainer}>
+        <form onSubmit={handleSubmit(submit_Fun)} className="sign-form">
           <label>Email</label>
           <input 
             placeholder="Enter your email" 
@@ -52,7 +52,7 @@ const Sign: React.FC = () => {
             {...register("password", { required: 'Your passeord is erquied' })}
           />
           {errors?.password && <span>{errors.password.message}</span>}
-          <button type="submit" className={`text-center justify-content-center m-auto d-block ${Stylee.supmit}`}>
+          <button type="submit" className="sign-submit text-center justify-content-center m-auto d-block">
             SIGN IN
           </button>
         </form>
