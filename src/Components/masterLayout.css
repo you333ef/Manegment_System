@@ -5,7 +5,8 @@
 
 .sidenavyapapa {
   
-    height: 100vh;
+    height: 100%;
+ 
     position: fixed; 
     left: 0;
     top: 0;
@@ -30,8 +31,8 @@
 
 .outlet {
     flex-grow: 1; 
-   
     padding: 20px;
+  
     overflow-y: auto; 
 }
 .content {
@@ -42,4 +43,16 @@
   .content-collapsed {
     margin-left: 80px; 
   }
-  
+  @media(max-width: 1024px) {
+    .outlet {
+        flex-grow: 1; 
+       width: 100% !important;
+        
+        overflow-y: auto; 
+    }
+    .content-collapsed {
+        margin-left: 40px; 
+        width: 100% !important;
+      }
+    
+    }

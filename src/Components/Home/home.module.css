@@ -26,6 +26,7 @@
   }
   
   @media (max-width: 1023px) {
+   
     .tableContainer {
       display: none;
     }
@@ -79,11 +80,25 @@
     .actions button:last-child {
       margin-right: 0;
     }
+    th{
+      font-weight: 700 !important;
+      font-size: 100px !important;
+    }
+    .value{
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .delete, .Update {
+    
+      font-size: 18px;
+    
+    }
   }
   td{
     font-size: 13px;
     font-weight: 600;
    
   }
+
   
   

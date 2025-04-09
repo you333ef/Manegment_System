@@ -15,7 +15,7 @@ const MasterLayOut = () => {
       </div>
       <div className={`content ${isCollapsed ? 'content-collapsed' : ''}`}>
         <div className="topnav">
-          <TopNav />
+          <TopNav collapsed={isCollapsed} setCollapsed={setIsCollapsed}/>
          
         </div>
         <div className="outlet">

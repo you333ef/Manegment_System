@@ -1,22 +1,14 @@
 
 .usersContainer {
-  
    padding: 3rem;
     background-color:rgba(255, 255, 255, 1); /* يمكنك تغييره حسب رغبتك */
     border-radius: 8px;
     box-shadow: 
     0 -5px 10px rgba(0, 0, 0, 0.15), /* ظل من الأعلى */
     0  5px 10px rgba(0, 0, 0, 0.1);  /* ظل من الأسفل (أو نفس القديم) */
-
-
 margin-top: 80px;
 width: 90%;
-
-
-
   }
-  
-  
   
   .label {
     display: block;
@@ -63,10 +55,19 @@ font-size: 14px;
         padding: 2rem;
     margin-top: 50px;
     width: 100%;
-    
-    
-    
       }
+      .usersContainer {
+       
+        width: 100% !important;
+        /* باقي التنسيقات كما هي */
+      }
+      .usersContainer {
+        margin-top: 80px; 
+        padding: 20px !important;;
+       
+       
+      }
+      
   }
   
   .errormessage{
@@ -87,7 +88,7 @@ font-size: 14px;
     
 }
 .coco {
-  position: relative; /* حتى نستطيع وضع الصورة Absolute داخله */
+  position: relative; 
   width: 100%;
 }
 
@@ -106,12 +107,12 @@ font-size: 14px;
 
 /* دفع محتوى الـContainer لأسفل حتى لا يتداخل مع الصورة */
 .usersContainer {
-  margin-top: 100px; /* تقريبًا نصف ارتفاع الصورة (130 / 2 = 65) */
+  margin-top: 80px; 
   padding: 3rem;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
+  width: 100%;
   /* باقي التنسيقات كما هي */
 }
 
