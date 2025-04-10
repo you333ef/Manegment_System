@@ -6,7 +6,7 @@ import { FaArrowLeftLong, FaArrowRightLong, FaRegBookmark, FaGraduationCap } fro
 import { IoHomeOutline } from 'react-icons/io5';
 import { CgProfile } from 'react-icons/cg';
 import logoutimage from '../../assets/Yousef/iconlogout.svg';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ContextYasta } from '../../Context/Test_data';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -24,6 +24,7 @@ interface UserData {
 
 const Side: React.FC<SideProps> = ({ collapsed, setCollapsed }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { data } = useContext(ContextYasta) as { data: UserData };
 
   const toggleCollapse = () => {
@@ -46,7 +47,6 @@ const Side: React.FC<SideProps> = ({ collapsed, setCollapsed }) => {
   };
 
   const [showModal, setShowModal] = useState(false);
-
   const handleCloseModal = () => setShowModal(false);
   const handleShowModal = () => setShowModal(true);
 
@@ -62,6 +62,9 @@ const Side: React.FC<SideProps> = ({ collapsed, setCollapsed }) => {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Helper function لتحديد العنصر النشط
+  const isActiveRoute = (route: string): boolean => location.pathname === route;
 
   return (
     <div className={Update.sideNavbar}>
@@ -88,63 +91,69 @@ const Side: React.FC<SideProps> = ({ collapsed, setCollapsed }) => {
 
       <ToastContainer />
 
+      <Sidebar
+        collapsed={collapsed}
+        collapsedWidth={window.innerWidth <= 1024 ? "60px" : undefined}
+        id="custom_sidebar"
+        className={`${Update.listMID}${Update.sideNavbar}`}
+      >
+        <div className={collapsed ? Update.United : Update.united_collapse}>
+          <div className={collapsed ? Update.topsidenav : Update.topsidenav}>
+            <div className={`${Update.topsidenavtitle} ${collapsed && 'TITILE_SIDE'}`}>
+              <h3>
+                <span>|</span> UMS
+              </h3>
+            </div>
+          </div>
 
+          <div className={`${Update.topsidenav} ${collapsed && 'TITILE_SIDEE'}`}>
+            <div className={`${Update.details}  ${collapsed && 'deails_Image'}`}>
+              <img src={profilePictue} alt="" />
+              <h6>
+                {data.firstName} {data.lastName}
+              </h6>
+              <p>Admin</p>
+            </div>
 
-      <Sidebar collapsed={collapsed} 
-     collapsedWidth={window.innerWidth <= 1024 ? "60px" : undefined}
-          id="custom_sidebar"
-          className={`${Update.listMID}${Update.sideNavbar}`}>
+            <Menu className={`text-center ${Update.myMenuContainer} ${collapsed && 'collapsed-menu'}`}>
+              <MenuItem
+                icon={<IoHomeOutline />}
+                onClick={go}
+                className={`text-center ${Update.menu_item} ${isActiveRoute('/dashboard/home') ? 'active' : ''}`}
+              >
+                <span className="menu-text">Home</span>
+              </MenuItem>
+              <MenuItem
+                icon={<FaRegBookmark />}
+                onClick={users}
+                className={`text-center ${Update.menu_item} ${isActiveRoute('/dashboard/users') ? 'active' : ''}`}
+              >
+                <span className="menu-text">Users</span>
+              </MenuItem>
+              <MenuItem
+                icon={<FaGraduationCap />}
+                onClick={users}
+                className={`text-center ${Update.menu_item} ${isActiveRoute('/dashboard/add-user') ? 'active' : ''}`}
+              >
+                <span className="menu-text">Add User</span>
+              </MenuItem>
+              <MenuItem
+                icon={<CgProfile />}
+                onClick={profilee}
+                className={`text-center ${Update.menu_item} ${isActiveRoute('/dashboard/profile') ? 'active' : ''}`}
+              >
+                <span className="menu-text">Profile</span>
+              </MenuItem>
+            </Menu>
 
-
-
-<div className={collapsed ? Update.United : Update.united_collapse}>
-
-
-
-
-<div className={collapsed ? Update.topsidenav : Update.topsidenav}>
-          <div className={`${Update.topsidenavtitle} ${collapsed && 'TITILE_SIDE'}`}>
-            <h3>
-              <span>|</span> UMS
-            </h3>
-           
+            <div onClick={Logout} className={`mt-5 ${Update.logout}  ${collapsed && 'collapsed-logout'}`}>
+              <p>Logout</p>
+              <span className={Update.logouticon}>
+                <img src={logoutimage} className="logoutyapa" alt="" />
+              </span>
+            </div>
           </div>
         </div>
-
-        <div className={`${Update.topsidenav} ${collapsed && 'TITILE_SIDEE'}`}>
-          <div className={`${Update.details}  ${collapsed && 'deails_Image'}`}>
-            <img src={profilePictue} alt="" />
-            <h6>
-              {data.firstName} {data.lastName}
-            </h6>
-            <p>Admin</p>
-          </div>
-
-          <Menu className={`text-center ${Update.myMenuContainer} ${collapsed && 'collapsed-menu'}`}>
-            <MenuItem icon={<IoHomeOutline />} onClick={go} className={`text-center ${Update.menu_item}`}>
-              <span className="menu-text">Home</span>
-            </MenuItem>
-            <MenuItem icon={<FaRegBookmark />} onClick={users} className={`text-center ${Update.menu_item}`}>
-              <span className="menu-text">Users</span>
-            </MenuItem>
-            <MenuItem icon={<FaGraduationCap />} onClick={users} className={`text-center ${Update.menu_item}`}>
-              <span className="menu-text">Add User</span>
-            </MenuItem>
-            <MenuItem icon={<CgProfile />} onClick={profilee} className={`text-center ${Update.menu_item}`}>
-              <span className="menu-text">Profile</span>
-            </MenuItem>
-          </Menu>
-
-          <div onClick={Logout} className={`mt-5 ${Update.logout}  ${collapsed && 'collapsed-logout'}`}>
-            <p>Logout</p>
-            <span className={Update.logouticon}>
-              <img src={logoutimage} className="logoutyapa" alt="" />
-            </span>
-          </div>
-        </div>
-</div>
-
-       
       </Sidebar>
     </div>
   );

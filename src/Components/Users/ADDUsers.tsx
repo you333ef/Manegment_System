@@ -91,7 +91,7 @@ const Users: React.FC = () => {
       <div className={`container ${styles.usersContainer}`}>
         <form onSubmit={handleSubmit(onsubmit)}>
           <div className="row">
-            <div className="col-lg-6 col-12 mb-3">
+            <div className="col-lg-6 col-12  mb-lg-3">
               <label htmlFor="username" className={styles.label}>
                 First Name
               </label>
@@ -104,7 +104,7 @@ const Users: React.FC = () => {
               />
               {errors.firstName && <p className={styles.errormessage}>{errors.firstName.message}</p>}
             </div>
-            <div className="col-lg-6 col-12 mb-3">
+            <div className="col-lg-6 col-12 mb-lg-3">
               <label htmlFor="email" className={styles.label}>
                 Last Name
               </label>
@@ -118,8 +118,8 @@ const Users: React.FC = () => {
               {errors.lastName && <p className={styles.errormessage}>{errors.lastName.message}</p>}
             </div>
           </div>
-          <div className="row">
-            <div className="col-lg-6 col-12 mb-3">
+          <div className="row ">
+            <div className="col-lg-6 col-12 mb-lg-3">
               <label htmlFor="username" className={styles.label}>
                 Email
               </label>
@@ -138,7 +138,7 @@ const Users: React.FC = () => {
               />
               {errors?.email && <p className={styles.errormessage}>{errors?.email.message}</p>}
             </div>
-            <div className="col-lg-6 col-12 mb-3">
+            <div className="col-lg-6 col-12 mb-lg-3">
               <label htmlFor="email" className={styles.label}>
                 Age
               </label>
@@ -163,7 +163,7 @@ const Users: React.FC = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-6 col-12 mb-3">
+            <div className="col-lg-6 col-12 mb-lg-3">
               <label htmlFor="username" className={styles.label}>
                 Phone Number
               </label>
@@ -182,7 +182,7 @@ const Users: React.FC = () => {
               />
               {errors?.phone && <p className={styles.errormessage}>{errors?.phone.message}</p>}
             </div>
-            <div className="col-lg-6 col-12 mb-3">
+            <div className="col-lg-6 col-12 mb-lg-3">
               <label htmlFor="email" className={styles.label}>
                 birth Date
               </label>

@@ -79,7 +79,7 @@ function NavScrollExample({ collapsed, setCollapsed }): React.ReactElement {
           {isLarge && (
             <Navbar.Collapse id="navbarScroll">
               <Nav
-                className="me-auto my-2 my-lg-0"
+                className="me-auto  my-lg-0"
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
@@ -106,7 +106,8 @@ function NavScrollExample({ collapsed, setCollapsed }): React.ReactElement {
         </Container>
       </Navbar>
       <div
-  className={`w-100 px-4 py-1 d-flex justify-content-between align-items-center responsive-container`}
+      
+  className={`container w-100 px-1 py-1 d-flex justify-content-between align-items-center responsive-container ${STYLEST.navbarUnder}`}
   style={{ backgroundColor: 'rgba(255, 255, 255, 1)' }}
 >
   <h5 className={STYLEST.TETO}>

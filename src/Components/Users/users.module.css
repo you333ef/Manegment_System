@@ -3,11 +3,9 @@
    padding: 3rem;
     background-color:rgba(255, 255, 255, 1); /* يمكنك تغييره حسب رغبتك */
     border-radius: 8px;
-    box-shadow: 
-    0 -5px 10px rgba(0, 0, 0, 0.15), /* ظل من الأعلى */
-    0  5px 10px rgba(0, 0, 0, 0.1);  /* ظل من الأسفل (أو نفس القديم) */
-margin-top: 80px;
-width: 90%;
+    
+ 
+width: 100%;
   }
   
   .label {
@@ -62,11 +60,25 @@ font-size: 14px;
         /* باقي التنسيقات كما هي */
       }
       .usersContainer {
-        margin-top: 80px; 
-        padding: 20px !important;;
+        margin-top: 20px; 
+        padding: 20px !important;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
        
        
       }
+      .usersContainer {
+        margin-top: 30px; 
+        padding: 3rem;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        /* باقي التنسيقات كما هي */
+      }
+      
       
   }
   
@@ -95,14 +107,15 @@ font-size: 14px;
 /* تنسيق الصورة بحيث تكون نصفها فوق الـContainer ونصفها بالداخل */
 .coco img {
   position: absolute;
-  top: -20px;
+  top: -10px;
   left: 50%;
   transform: translate(-50%, -50%); 
   /* translate(-50%, -50%) يجعل مركز الصورة (منتصفها) عند أعلى الـContainer */
   
-  width: 120px;
-  height: 120px;
+  width: 115px;
+  height: 115px;
   border-radius: 50%;
+  padding: 5px;
 }
 
 /* دفع محتوى الـContainer لأسفل حتى لا يتداخل مع الصورة */
@@ -119,4 +132,43 @@ font-size: 14px;
 .input{
   font-size: 14px;
   font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .usersContainer {
+    padding: 1.5rem !important; /* تقليل المسافة الداخلية */
+    margin-top:8px !important; /* تقليل المسافة الكبيرة */
+    box-shadow: none !important; /* إزالة الـ shadow */
+  }
+
+  .input {
+    width: 100% !important; /* جعل الـ input يأخذ العرض الكامل */
+    margin-bottom: 1rem !important; /* تقليل المسافة بين الـ inputs */
+  }
+
+  .row > .col-lg-6 {
+    flex: 0 0 100% !important; /* جعل الأعمدة تأخذ العرض الكامل */
+    max-width: 100% !important;
+  }
+  .coco img {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    /* translate(-50%, -50%) يجعل مركز الصورة (منتصفها) عند أعلى الـContainer */
+    
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+  .profileContainer .input{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+
+    
+
+  }
 }

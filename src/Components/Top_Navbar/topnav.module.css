@@ -11,6 +11,7 @@
 .bgtopanv{
     background-color: rgba(255, 255, 255, 1) !important;
     border: none !important;
+    padding: 0;
     box-shadow: none !important; 
  
    
@@ -66,3 +67,18 @@
         font-weight: 700;
     }
 }
+
+.navbarUnder{
+    display: none;
+}
+.TTOPYA {
+    margin:0 0 0 30px !important; /* إزالة أي Margin */
+    padding: 0 !important; /* إزالة أي Padding */
+  }
+  .TETO {
+    margin: 0 !important; /* إزالة أي Margin افتراضي */
+  }
+  body {
+    margin: 0 !important; /* إزالة أي Margin افتراضي من الـ body */
+    padding: 0 !important; /* إزالة أي Padding افتراضي من الـ body */
+  }
