@@ -91,6 +91,7 @@ const Side: React.FC<SideProps> = ({ collapsed, setCollapsed }) => {
 
 
       <Sidebar collapsed={collapsed} 
+       style={{ overflow: "hidden", maxWidth: "100vw" }}
      collapsedWidth={window.innerWidth <= 1024 ? "60px" : undefined}
           id="custom_sidebar"
           className={`${Update.listMID}${Update.sideNavbar}`}>

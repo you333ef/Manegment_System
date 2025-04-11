@@ -198,3 +198,44 @@
   background-color: rgba(254, 175, 0, 1) !important; /* Replace #desiredColor with the desired color */
   color: #fff !important;
 }
+/*  */
+.menu_item {
+  margin: 0 !important; /* إزالة الهوامش */
+  padding: 0 !important; /* إزالة الحشوات */
+  width: 100%; /* تأكد من أن العرض لا يتجاوز الحاوية */
+  box-sizing: border-box;
+}
+#custom_sidebar .ps-sidebar-inner {
+  width: 100%; /* تأكد من أن العناصر الداخلية لا تتجاوز الحاوية */
+  overflow: hidden; /* منع التمرير الجانبي */
+  box-sizing: border-box; /* حساب الحواف والحشوات ضمن العرض */
+}
+body, html {
+  overflow-x: hidden; /* منع التمرير الأفقي */
+  width: 100%; /* تأكد من أن العرض لا يتجاوز الشاشة */
+}
+
+#custom_sidebar {
+  max-width: 100vw; /* منع تجاوز العرض الكامل للشاشة */
+  overflow: hidden; /* منع التمرير الجانبي */
+}
+.sideNavbar {
+  height: 100vh !important; /* تأكد من أن الارتفاع يغطي الشاشة بالكامل */
+  overflow: hidden !important; /* منع التمرير الجانبي */
+  background-color: rgba(242, 234, 225, 1) !important;
+  width: 100%; /* تأكد من أن العرض لا يتجاوز الحاوية */
+  max-width: 100vw; /* منع تجاوز العرض الكامل للشاشة */
+  box-sizing: border-box; /* حساب الحواف والحشوات ضمن العرض */
+}
+
+@media (max-width: 1024px) {
+  .sideNavbar {
+    width: 60px !important; /* عرض مناسب للشاشات الصغيرة */
+    overflow: hidden !important; /* منع التمرير الجانبي */
+  }
+}
+
+#custom_sidebar {
+  max-width: 100vw; /* منع تجاوز العرض الكامل للشاشة */
+  overflow: hidden; /* منع التمرير الجانبي */
+}

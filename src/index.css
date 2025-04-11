@@ -208,7 +208,7 @@ body, html {
   #custom_sidebar {
     max-width: 100vw; /* منع تجاوز العرض الكامل للشاشة */
     overflow: hidden; /* منع التمرير الجانبي */
-  }
+
 }
 .usersContainer {
   max-height: 100vh;
