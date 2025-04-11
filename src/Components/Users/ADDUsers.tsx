@@ -206,7 +206,7 @@ const Users: React.FC = () => {
               {errors?.birthDate && <p className={styles.errormessage}>{errors?.birthDate.message}</p>}
             </div>
           </div>
-          <div className="text-center mt-4">
+          <div className="text-center mt-lg-4 mt-sm-1 mt-md-2">
             <button type="submit" className={styles.saveButton}>
               Save
             </button>
