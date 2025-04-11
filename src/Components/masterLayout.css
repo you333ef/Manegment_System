@@ -10,7 +10,7 @@
     position: fixed; 
     left: 0;
     top: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .content {
@@ -32,7 +32,7 @@
 .outlet {
     flex-grow: 1; 
     padding: 20px;
-  height: 100vh !important;
+  height: 100% !important;
     overflow-y: auto; 
 }
 .content {
@@ -47,12 +47,15 @@
     .outlet {
         flex-grow: 1; 
        width: 100% !important;
-        
-        overflow-y: auto; 
+    height: 100% !important;
+        overflow-y: auto !important; 
+       
     }
     .content-collapsed {
         margin-left: 40px; 
         width: 100% !important;
+   
       }
     
     }
+    

@@ -1,11 +1,9 @@
 
 .usersContainer {
    padding: 3rem;
-    background-color:rgba(255, 255, 255, 1); /* يمكنك تغييره حسب رغبتك */
+    background-color:rgba(255, 255, 255, 1); 
     border-radius: 8px;
-    
- 
-width: 100%;
+    width: 100%;
   }
   
   .label {
@@ -52,7 +50,7 @@ font-size: 14px;
     .usersContainer {
         padding: 2rem;
     margin-top: 50px;
-    width: 100%;
+    width: 100% !important;
       }
       .usersContainer {
        
@@ -168,7 +166,7 @@ font-size: 14px;
     margin: auto;
     width: 100%;
 
-    
+
 
   }
 }

@@ -20,6 +20,7 @@
   
   .tableContainer {
     display: block;
+   
   }
   .cardsContainer {
     display: none;
@@ -28,6 +29,7 @@
   @media (max-width: 1023px) {
    
     .tableContainer {
+     
       display: none;
     }
     .cardsContainer {
