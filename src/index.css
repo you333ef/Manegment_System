@@ -215,3 +215,18 @@ body, html {
   flex-direction: column;
   justify-content: space-between;
 }
+.sideNavbar {
+  height: 100vh !important;
+  overflow: hidden !important; /* منع الـ overflow */
+  background-color: rgba(242, 234, 225, 1) !important;
+  width: 100%; /* تأكد من أن العرض لا يتجاوز الحاوية */
+  max-width: 100vw; /* منع تجاوز العرض الكامل للشاشة */
+  box-sizing: border-box; /* تأكد من أن الحواف والحشوات محسوبة ضمن العرض */
+}
+
+@media (max-width: 1024px) {
+  .sideNavbar {
+    width: 60px !important; /* عرض مناسب للشاشات الصغيرة */
+    overflow: hidden !important; /* منع التمرير الجانبي */
+  }
+}
